@@ -18,6 +18,18 @@ public:
         _size = 0;
     }
 
+    // int *a 也可以
+    void createListNode(LinkedNode *head, int a[], int len)
+    {
+        LinkedNode *cur = head;
+        for (int i = 0; i < len; i++)
+        {
+            LinkedNode *p = new LinkedNode(a[i]);
+            cur->next = p;
+            cur = p;
+        }
+    }
+
     // 获取到第index个节点数值，如果index是非法数值直接返回-1， 注意index是从0开始的，第0个节点就是头结点
     int get(int index)
     {
