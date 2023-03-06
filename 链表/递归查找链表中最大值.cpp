@@ -18,7 +18,7 @@ int Max(ListNode *f)
 {
 	int max;
 	if (f->next == NULL)
-		a return f->val;
+		return f->val;
 	else
 	{
 		max = Max(f->next);
