@@ -41,3 +41,27 @@ bool pop(Stack &s, int &x)
         x = s.data[s.top--];
     return true;
 }
+int top(Stack s)
+{
+    return s.data[s.top];
+}
+void show(Stack s)
+{
+    while (s.top >= 0)
+    {
+        cout << s.data[s.top--] << " ";
+    }
+    cout << endl;
+}
+int main()
+{
+    Stack s;
+    create(s);
+    push(s, 1);
+    push(s, 2);
+    cout << top(s) << endl;
+    show(s);
+    int i;
+    pop(s, i);
+    show(s);
+}
